@@ -17,11 +17,13 @@ void main() {
       await tester.tap(find.text('Vegetable Pizza'));
       await tester.pumpAndSettle();
 
-      expect(find.text('Fresh vegetables, mushrooms, olives, capsicum and melted cheese.'), findsNothing);
       expect(
-        find.textContaining('fresh vegetables'),
-        findsOneWidget,
+        find.text(
+          'Fresh vegetables, mushrooms, olives, capsicum and melted cheese.',
+        ),
+        findsNothing,
       );
+      expect(find.textContaining('fresh vegetables'), findsOneWidget);
       expect(find.text('Back to Menu'), findsOneWidget);
     });
 

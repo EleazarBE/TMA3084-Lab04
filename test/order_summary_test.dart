@@ -3,8 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:lab04/order_summary.dart';
 
 void main() {
-  testWidgets('Order summary displays correct item and total',
-      (WidgetTester tester) async {
+  testWidgets('Order summary displays correct item and total', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(
       const MaterialApp(
         home: OrderSummaryScreen(
